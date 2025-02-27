@@ -60,7 +60,11 @@ export default function AudioVisualizer() {
 
       // Create audio context if it doesn't exist
       if (!audioContextRef.current) {
-        audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+        // Define proper type for WebkitAudioContext
+        const AudioContextClass = window.AudioContext || 
+          ((window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext);
+        
+        audioContextRef.current = new AudioContextClass();
       }
 
       // Get user media with selected microphone
@@ -139,7 +143,7 @@ export default function AudioVisualizer() {
       }
 
       // Clear canvas
-      canvasCtx.fillStyle = 'rgba(15, 23, 42, 0.2)';
+      canvasCtx.fillStyle = 'rgb(15, 23, 42)';
       canvasCtx.fillRect(0, 0, width, height);
 
       // Draw visualization based on current type

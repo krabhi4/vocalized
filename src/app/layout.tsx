@@ -13,9 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NODE_ENV === 'production' ? 'https://vocalized.vercel.app' : 'http://localhost:3000'
+  ),
   title: 'Vocalized | Interactive Audio Visualization Tool',
-  description: 'Visualize your voice and audio in real-time with customizable visualizations. A powerful tool for audio analysis and creative expression.',
-  keywords: ['audio visualization', 'voice visualization', 'sound waves', 'audio analysis', 'real-time audio'],
+  description:
+    'Visualize your voice and audio in real-time with customizable visualizations. A powerful tool for audio analysis and creative expression.',
+  keywords: [
+    'audio visualization',
+    'voice visualization',
+    'sound waves',
+    'audio analysis',
+    'real-time audio',
+  ],
   authors: [{ name: 'Vocalized Team' }],
   openGraph: {
     title: 'Vocalized | Interactive Audio Visualization Tool',
