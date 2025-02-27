@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NODE_ENV === 'production' ? 'https://vocalized.vercel.app' : 'http://localhost:3000'
+    process.env.NODE_ENV === 'production' ? 'http://vocalized.krabhi4.in' : 'http://localhost:3000'
   ),
   title: 'Vocalized | Interactive Audio Visualization Tool',
   description:
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Vocalized | Interactive Audio Visualization Tool',
     description: 'Visualize your voice and audio in real-time with customizable visualizations',
-    url: 'https://vocalized.vercel.app',
+    url: 'http://vocalized.krabhi4.in',
     siteName: 'Vocalized',
     images: [
       {
