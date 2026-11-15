@@ -61,9 +61,10 @@ export default function AudioVisualizer() {
       // Create audio context if it doesn't exist
       if (!audioContextRef.current) {
         // Define proper type for WebkitAudioContext
-        const AudioContextClass = window.AudioContext || 
-          ((window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext);
-        
+        const AudioContextClass =
+          window.AudioContext ||
+          (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+
         audioContextRef.current = new AudioContextClass();
       }
 
@@ -278,7 +279,8 @@ export default function AudioVisualizer() {
     <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto p-6 space-y-6">
       <h1 className="text-3xl font-bold">Vocalized - Interactive Audio Visualization</h1>
       <p className="text-slate-300 text-center max-w-2xl">
-        Visualize your voice and audio in real-time with customizable waveform displays. Experiment with different visualization styles.  
+        Visualize your voice and audio in real-time with customizable waveform displays. Experiment
+        with different visualization styles.
       </p>
 
       <div className="w-full flex flex-col md:flex-row gap-4 items-center justify-between">
