@@ -30,6 +30,6 @@
     "eslint-config-next": "15.5.29",
     "@eslint/eslintrc": "^3.3.7",
     "prettier": "^3.10.1",
-    "autoprefixer": "^10.6.2"
+    "autoprefixer": "^10.7.0"
   }
 }
